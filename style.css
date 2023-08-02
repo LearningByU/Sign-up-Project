@@ -1,0 +1,186 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: consolas;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow: hidden;
+    background: #e1dbcf;
+}
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container .Box-top{
+    position: relative;
+    width: 440px;
+    height: 580px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.container .Box-top::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 25px;
+    height: 100%;
+    filter: blur(4px);
+    z-index: 1;
+    background-image: conic-gradient(rgb(239, 160, 1)20deg, transparent 1202deg);
+}
+.container .Box-top::after{
+    content: '';
+    position: absolute;
+    top: 1;
+    right: -1px;
+    width: 25px;
+    height: 100%;
+    filter: blur(4px);
+    z-index: 1;
+    background-image: conic-gradient(rgb(239, 176, 1)20deg, transparent 1202deg);;
+}
+.container .Box-top .shadow{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #e15402;
+}
+.container .Box-top .shadow::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: calc(120% + 60px);
+    width: 120%;
+    height: 250%;
+    background: linear-gradient(rgba(62, 2, 2, 0.055),transparent);
+    transform: skewX(43deg);
+}
+.container .Box-top .shadow.shadow::after{
+    content: '';
+    position: absolute;
+    bottom: -200%;
+    left: calc(110% + 100px);
+    width: 101%;
+    height: 200%;
+    background: linear-gradient(rgba(73, 2, 2, 0.055),transparent);
+    transform: skewX(45deg);
+}
+.cover{
+    position: absolute;
+    top: 0;
+    left: -100px;
+    width: -100px;
+    height: 100px;
+    background: #e1dbcf;
+    z-index: 10;
+}
+.content{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(#dc6f09, #bab1a3);
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1),
+                15px 15px 15px rgba(0, 0, 0, 0.1,
+                20px 10px 20px rgba(0, 0, 0, 0.1),
+                50px 50px 80px rgba(0, 0, 0, 0.25),
+                inset 3px 3px 2px #ff6f00);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.content .form{
+    position: relative;
+    width: 260px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.logo{
+    width: 70px;
+    height: 70px;
+    background: #612502;
+    color: #fff;
+    font-size: 1.75em;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+.content .form h2{
+    font-size: 2em;
+    color: #8b3a0b;
+    margin-bottom: 20px;
+}
+.content .form .inputBox{
+    position: relative;
+    width: 100%;
+    margin-top: 30px;
+}
+.content .form .inputBox input{
+    position: relative;
+    width: 100%;
+    padding: 10px 0 10px 25px;
+    font-size: 1.25em;
+    background: transparent;
+    box-shadow: none;
+    border: none;
+    border-bottom: 3px solid #8b3a0b;
+    outline: none;
+    color: #682b03;
+}
+.content .form .inputBox i{
+    position: absolute;
+    left: 0;
+    bottom: 15px;
+    font-size: 1.25em;
+    color: #4e2103;
+}
+.content .form .inputBox span{
+    position: absolute;
+    left: 0;
+    padding: 10px 0  10px 25px;
+    font-size: 1.25em;
+    pointer-events: none;
+    color: #642f01;
+    transition: 0.5s;
+}
+.content .form .inputBox input:focus ~ span,
+.content .form .inputBox input:valid ~ span{
+    transform: translateY(-20px);
+    font-size: 1em;
+    background: #120000;
+    color: #6c2d04;
+    padding: 4px 8px;
+    border-radius: 7px;
+    box-shadow: inset 0 0 60px whitesmoke,
+                inset 20px 0 80px rgb(255, 0, 64),
+                inset -20px 0 80px rgb(255, 132, 0),
+                inset 20px 0 300px rgb(255, 0, 64),
+                inset -20px 0 300px rgb(255, 89, 0),
+                0 0 50px #fb4b00,
+                -10px 0 80px rgb(255, 0, 136),
+                10px 0 80px rgb(0, 115, 255);
+}
+.content .form .inputBox input[type="submit"]
+{
+    color: #fff;
+    background: #4e2103;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 7px;
+    border: 1px solid whitesmoke;
+}
+.content .form .inputBox input[type="submit"]:hover{
+    background: #3e1c05;
+    transition: 0.5s;
+}
